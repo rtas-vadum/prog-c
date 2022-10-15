@@ -1,0 +1,78 @@
+Projet:
+
+Repository:
+
+domain.list
+---list.h
+---list.c
+domain.apps
+---app.c
+
+Maillon:
+
+typedef struct ListeElmt
+{ void* data // Element de quelquonque type
+struct listElmt *next //pointeur sur element suivant
+}
+
+
+
+Liste:
+
+typedef struct List
+{
+	int size;
+	int (*match)(const void *key1, const void *key2)
+	//pt sur fonction renvoyant entier avec deux paramettres qquonque
+
+	void (*destroy)(void *data); //pt sur fonction
+	listElm *head
+	listElm *tail
+
+}
+
+
+void list_init(List *list, void (*destroy)(void *data))
+//inialiser le tail, le head, 
+
+
+
+void list_destroy
+
+
+int list_ins_next
+// code en trois partie
+creation nouvel element
+utilisation de malloc return 1/-1
+nom: new ou newElement
+data en parametres
+domain.apps peut fournir un element NULL
+affecter data a data
+if element == NULL -> ajouter maillon en tete de liste
+if liste vide: head et en tail
+if liste remplie et element: ajouter a la fin ou ajouter a un emplacement specifie
+sinon -> deplacer tail 
+
+
+
+int list_rem_next
+
+Macro fonction:
+
+#define list_size(list) ((list)->size)
+#define list_head
+#define list_tail
+#define list_is_tail
+#define list_is_head
+
+#define list_data
+#define list_next
+
+
+
+
+
+
+//QQSOIT L'OPERATION EFFECTUEE, IL Y A UNE CONTRAINTE: ON PEUT AJOUTER MAILLON, SUPPRIMER UN MAILLON, IL FAUT QUE TAIL POINTE SUR LE DERNIER ELEMENT
+
+
