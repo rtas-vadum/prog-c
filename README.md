@@ -1,5 +1,7 @@
 # prog-c
 
+Auteur : Antoine GRAND
+
 Après la compilation on peut observer les exécutions suivantes :
 
 ![image](https://user-images.githubusercontent.com/74561195/196249911-e31b3151-5904-4c2f-a11b-48fdee4a4355.png)
